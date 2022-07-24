@@ -1,0 +1,75 @@
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <title>Cake Form</title>
+    <script type="text/javascript" src="form.js"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+
+
+<body onload='hideTotal()'>
+    <div id="wrap">
+        <form action="" id="acaiform" onsubmit="return false;">
+        <div>
+            <div class="cont_order">
+               <fieldset>
+                <legend>Faça seu Açaí!</legend>
+                <label >Tamanho da tigela</label>
+                <label class='radiolabel'><input type="radio"  name="selectedacai" value="um" onclick="calculateTotal()" />Tamanho pequeno -  serve 1 pessoa (R$20)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedacai" value="dois" onclick="calculateTotal()" />Tamanho médio - serve 2 pessoas(R$25)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedacai" value="tres" onclick="calculateTotal()" />Tamanho grande - serve 3 pessoas(R$35)</label><br/>
+                <label class='radiolabel'><input type="radio"  name="selectedacai" value="quatro" onclick="calculateTotal()" />Tamanho extra grande - serve 5 pessoas(R$75)</label><br/>
+                <br/>
+                <label >Recheio</label>
+
+                <select id="Recheio" name="Recheio" onchange="calculateTotal()">
+                <option value="None">Selecione o Recheio</option>
+                <option value="Amendoin">Amendoin(R$3)</option>
+                <option value="Nutella">Nutella(R$5)</option>
+                <option value="Brigadeiro">Brigadeiro(R$7)</option>
+                <option value="Banana">Banana(R$8)</option>
+                <option value="Morango">Morango(R$10)</option>
+                <option value="Granola">Granola(R$5)</option>
+
+               </select>
+                <br/>
+                <p>
+                <label for='condensado' class="inlinelabel">Incluir Leite Condensado(R$5)</label>
+               <input type="checkbox" id="condensado" name='condensado' onclick="calculateTotal()" />
+               </p>
+
+
+  <p>
+			       <label for='ninho' class="inlinelabel">Incluir Leite Ninho(R$1)</label>
+               <input type="checkbox" id="ninho" name='ninho' onclick="calculateTotal()" />
+               </p>
+
+						  <div id="totalPrice"></div>
+
+
+
+                </fieldset>
+
+
+        	<div class="cont_details">
+            	<fieldset>
+                <legend>Contato</legend>
+                <label for='nome'>Nome</label>
+                <input type="text" className="nome" id="nome" name='nome' placeholder="Informe seu nome" required />
+                <br/>
+                <label for='endereço'>Endereço</label>
+                <input type="text" className="endereço" id="endereço" name='endereço' placeholder="Informe seu endereço" required/>
+                <br/>
+                <label for='telefone'>Telefone</label>
+                <input type="text" className="telefone" id="telefone" name='telefone' placeholder="Informe seu telefone" required/>
+                <br/>
+                </fieldset>
+            </div>
+            <input type='submit' id='submit' onSubmit={clicarAlerta} value='Enviar' onclick="calculateTotal(), clicarAlerta()" />
+        </div>  
+       </form>
+	</div>
+
+</body>
+</html> 
