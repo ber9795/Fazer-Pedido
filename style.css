@@ -70,7 +70,7 @@ body {
 #wrap input[type="text"]:hover,
 #wrap input[type="text"]:active {
     background-color: #FAF398;
-}
+ }
 
 #wrap input#submit {
 
@@ -100,9 +100,13 @@ body {
 
 
 #wrap div#totalPrice {
-    padding: 10px;
+    padding: 8px;
     font-weight: bold;
     background-color: #ff0;
+    height: 2px;
+    text-align: center;
+    line-height:10px;
+
 }
 
 #wrap label.radiolabel {
