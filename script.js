@@ -93,7 +93,7 @@ function clicarAlerta() {
 
       evt.preventDefault();
     } else {
-      alert(`${nome} seu pedido foi criado com sucesso!`);
+      alert(`Pedido de ${nome} foi criado com sucesso!`);
       window.location.href = "index.html";
     }
   }
