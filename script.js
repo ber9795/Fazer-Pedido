@@ -87,8 +87,8 @@ function clicarAlerta() {
   let alerta = document.getElementById("submit");
   let nome = document.getElementById("nome").value;
   let lista = document.querySelectorAll("#nome, #endereço, #telefone");
-  for (var i = 0; i < lista.length; ++i) {
-    if (lista[i].value == 0) {
+  lista.forEach(function(listas) {
+    if (listas.value == 0) {
       alert("Preencha os campos de seu contato.");
 
       evt.preventDefault();
@@ -96,5 +96,5 @@ function clicarAlerta() {
       alert(`Pedido de ${nome} foi criado com sucesso!`);
       window.location.href = "index.html";
     }
-  }
+  })
 }
